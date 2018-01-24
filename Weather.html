@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   	<link rel="stylesheet" type="text/css" href="weathercss.css">
+
+</head>
+<body>
+	<div class="row">
+	<div class="col-md-4" style="background-color:grey;"></div>
+	<div class="col-md-4" style="background-color:lightgrey;" id="form" >
+	<div>	<span align="center">Set city</span><br>
+		<label for="city">City:</label>
+    <input class="form-control" id="city" placeholder="City" style="text-align: center">
+    <label for="city">Country:</label>
+    <input type="country" class="form-control" id="country" placeholder="Type ZIP Code" style="text-align: center">
+    <div class="checkbox" align="center" >
+      <label align="center">
+      	<input type="checkbox" name="details"> More detail
+       <button id="submit" class="btn btn-light" style="margin: 1.6px">Send request</button></label>
+    </div>
+
+		</div>
+
+	</div>
+	<div class="col-md-4" class="emptycontainer" style="background-color:grey;"></div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="weatherjs.js"></script>
+</body>
