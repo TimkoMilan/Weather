@@ -11,6 +11,22 @@ $("#document").ready(function(){
         				console.log(urllink);
         			}
         		}
+
+                $.ajax({
+                    url : urllink,
+                    data : { format: 'json'},
+                    error : function(){
+                        console.log('error');
+
+                 },
+                    datatype : 'json',
+                    success : function(data){
+                        console.log("temp"+data.main.temp);
+                    
+                    },
+                        type : 'GET'
+                    });
+
         
     });
 
