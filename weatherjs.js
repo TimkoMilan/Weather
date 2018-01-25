@@ -26,14 +26,17 @@ $(document).ready(function(){
 
                      $('#main').empty();
                 var table=$('<table/>');
+
+                $(table).addClass("weatherTable");
+
                 var tr=getTr('City:', city);
                 table.append(tr);
                 $('#form').append(table);
                 
-                var tr=getTr('Country:', $('#entercity').val());
+                var tr=getTr('Country:', $('#country').val());
                 table.append(tr);
                 
-                var tr=getTr('Temperature:', parseFloat(data.main.temp-273.15).toFixed(1)+" ℃");
+                var tr=getTr('Temperature:', parseFloat(data.main.temp-273.15).toFixed(1)+" ℃")
                 table.append(tr);
                 
                 var tr=getTr('Humidity:', data.main.humidity+" %");
@@ -45,13 +48,14 @@ $(document).ready(function(){
                 var tr=getTr('Pressure:', data.main.pressure+' hPa');
                 table.append(tr);
                 
-                if($("#details").is(":checked") == true){
+                if($("#showDetails").is(":checked") == true){
                     
                     
-                    var tr=getTr('Sunrise:', data.sys.sunrise);
+                    var tr=getTr('Sunrise:',new Date(data.sys.sunrise*1000).getHours()+':'+new Date(data.sys.sunrise*1000).getMinutes());
                     table.append(tr);
-                    
-                    var tr=getTr('Sunset:', data.sys.sunset);
+                        
+                 
+                    var tr=getTr('Sunset:',new Date(data.sys.sunset*1000).getHours()+':'+new Date(data.sys.sunset*1000).getMinutes());
                     table.append(tr);
                     
                     var tr=getTr('Wind:', data.wind.speed+' m/s');
@@ -63,7 +67,7 @@ $(document).ready(function(){
                     var tr=getTr('Max temperature:', parseFloat(data.main.temp_max-273.15).toFixed(1)+" ℃");
                     table.append(tr);
                     
-                    var tr=getTr('Min temperature:', data.visibility);
+                    var tr=getTr('Visibility:', data.visibility);
                     table.append(tr);
                 };
 
@@ -83,7 +87,7 @@ $(document).ready(function(){
         tr.append(td1);
         tr.append(td2); 
                     
-                    return tr;
+         return tr;
 
     }
 });
