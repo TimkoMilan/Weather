@@ -9,6 +9,7 @@
 <body>
 	<div class="row">
 	<div class="col-md-4" style="background-color:grey;"></div>
+
 	<div class="col-md-4" style="background-color:lightgrey;" id="form" >
 	<div>	<span align="center">Set city</span><br>
 		<label for="city">City:</label>
@@ -17,7 +18,7 @@
     <input type="country" class="form-control" id="country" placeholder="Type ZIP Code" style="text-align: center">
     <div class="checkbox" align="center" >
       <label align="center">
-      	<input type="checkbox" name="details"> More detail
+      	<input type="checkbox" name="details" id="showDetails"> More detail
        <button id="submit" class="btn btn-light" style="margin: 1.6px">Send request</button></label>
     </div>
 
@@ -26,6 +27,15 @@
 	</div>
 	<div class="col-md-4" class="emptycontainer" style="background-color:grey;"></div>
 	</div>
+
+	<div class="row">
+
+		<div class="col-md-4" style="background-color:grey;"></div>
+
+		<div class="main" id="main" class="col-md-4"  style="background-color:white;"></div>
+
+		<div class="col-md-4" style="background-color:grey;"></div>
+
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script type="text/javascript" src="weatherjs.js"></script>
