@@ -1,14 +1,29 @@
-
 body {
-    background-color: grey;
+    background-image: url("wallpaper.jpg");
+    color: white;
 }
+
 input.placeholder {
     text-align: center;
 }
 #form{-webkit-box-shadow: inset -18px 2px 80px 0px rgba(0,0,0,0.22);
 -moz-box-shadow: inset -18px 2px 80px 0px rgba(0,0,0,0.22);
 box-shadow: inset -18px 2px 80px 0px rgba(0,0,0,0.22);
+
 }
 .weatherTable tr: nth-child (even){
 		background: grey;
+}
+input {
+    
+    background: red;
+}
+ 
+input {
+  border: 2px solid black;
+  padding: 3px;
+}
+
+input:placeholder-shown {
+  border-color: silver;
 }

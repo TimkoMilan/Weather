@@ -23,6 +23,8 @@ $(document).ready(function(){
                 {
                     console.log("temp: "+data.main.temp);
                     console.log("desc: "+data.weather[0].description);
+                    $( '#sunriseDiv' ).text("Sunreise: " + new Date(data.sys.sunrise*1000).getHours()+':'+new Date(data.sys.sunrise*1000).getMinutes() );
+                    $( '#sunsetDiv' ).text("Sunset: " + new Date(data.sys.sunset*1000).getHours()+':'+new Date(data.sys.sunset*1000).getMinutes() );
 
                      $('#main').empty();
                 var table=$('<table/>');
