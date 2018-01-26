@@ -7,16 +7,16 @@
 
 </head>
 <body>
-	<div class="row">
-	<div class="col-md-4" align="center"><img src="sunreise.png" width="220px"> <div id="sunriseDiv">Sunreise:</div></div>
+	<div class="row" class="view hm-zoom">
+	<div class="col-md-4" align="center"><img src="sunreise.png" width="220px" class="img-fluid "> <div id="sunriseDiv">Sunreise:</div></div>
 
 
 	<div class="col-md-4"  id="form" >
-	<div>	<span align="center"><img src="logo.png" width="400px"  align="center"></span><br>
+	<div>	<div align="center"><img src="logo.png" width="400px"  align="center"></div><br>
 		 
     <input class="form-control transparent-input" id="city" placeholder="City" style="text-align: center">
     
-    <input type="country" class="form-control transparent-input" id="country" placeholder="Type ZIP Code" style="text-align: center" style="color: white">
+    <input type="country" class="form-control transparent-input" id="country" placeholder="Type Country Code" style="text-align: center" style="color: white">
     <div class="checkbox" align="center" >
       <label align="center">
       	<input type="checkbox" name="details" id="showDetails"> More detail
@@ -32,5 +32,6 @@
 
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
 	<script type="text/javascript" src="weatherjs.js"></script>
 </body>

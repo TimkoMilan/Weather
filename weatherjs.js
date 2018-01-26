@@ -31,45 +31,49 @@ $(document).ready(function(){
 
                 $(table).addClass("weatherTable");
 
-                var tr=getTr('City:', city);
+                var tr=getTr('<img src="city.png" width="25px">  City:', city);
                 table.append(tr);
                 $('#form').append(table);
                 
-                var tr=getTr('Country:', $('#country').val());
+                var tr=getTr('<img src="country.png" width="25px">  Country:', $('#country').val());
+        
                 table.append(tr);
                 
-                var tr=getTr('Temperature:', parseFloat(data.main.temp-273.15).toFixed(1)+" ℃")
+                var tr=getTr('<img src="temperature.png" width="25px"> Temperature:', parseFloat(data.main.temp-273.15).toFixed(1)+" ℃")
                 table.append(tr);
                 
-                var tr=getTr('Humidity:', data.main.humidity+" %");
+                var tr=getTr('<img src="humidity.png" width="25px">  Humidity:', data.main.humidity+" %");
                 table.append(tr);
                 
-                var tr=getTr('Description:', data.weather[0].description);
+                var tr=getTr('<img src="cloud.png" width="25px">  Description:', data.weather[0].description);
                 table.append(tr);
                 
-                var tr=getTr('Pressure:', data.main.pressure+' hPa');
+                var tr=getTr('<img src="pressure.png" width="25px">  Pressure:', data.main.pressure+' hPa');
                 table.append(tr);
                 
                 if($("#showDetails").is(":checked") == true){
                     
                     
-                    var tr=getTr('Sunrise:',new Date(data.sys.sunrise*1000).getHours()+':'+new Date(data.sys.sunrise*1000).getMinutes());
+                    var tr=getTr('<img src="sunrise.png" width="25px">  Sunrise:',new Date(data.sys.sunrise*1000).getHours()+':'+new Date(data.sys.sunrise*1000).getMinutes());
                     table.append(tr);
                         
                  
-                    var tr=getTr('Sunset:',new Date(data.sys.sunset*1000).getHours()+':'+new Date(data.sys.sunset*1000).getMinutes());
+                    var tr=getTr('<img src="moon.png" width="25px">  Sunset:',new Date(data.sys.sunset*1000).getHours()+':'+new Date(data.sys.sunset*1000).getMinutes());
                     table.append(tr);
                     
-                    var tr=getTr('Wind:', data.wind.speed+' m/s');
+                    var tr=getTr('<img src="wind.png" width="25px">  Wind:', data.wind.speed+' m/s');
                     table.append(tr); 
                     
-                    var tr=getTr('Min temperature:', parseFloat(data.main.temp_min-273.15).toFixed(1)+" ℃");
+                    var tr=getTr(' <img src="temperature.png" width="25px">Min temperature:', parseFloat(data.main.temp_min-273.15).toFixed(1)+" ℃");
                     table.append(tr);
                     
-                    var tr=getTr('Max temperature:', parseFloat(data.main.temp_max-273.15).toFixed(1)+" ℃");
+                    var tr=getTr('<img src="temperature.png" width="25px">  Max temperature:', parseFloat(data.main.temp_max-273.15).toFixed(1)+" ℃");
                     table.append(tr);
                     
-                    var tr=getTr('Visibility:', data.visibility);
+                    var tr=getTr('<img src="visibility.png" width="25px">Visibility:', data.visibility);
+                    table.append(tr);
+
+                    var tr=getTr('Map:',"<A HREF =\"https://www.google.com/maps/search/?api=1&query=" + data.coord.lat + "," + data.coord.lon+ "\"target=\"blank\">" + city + "</A>");
                     table.append(tr);
                 };
 
@@ -93,3 +97,5 @@ $(document).ready(function(){
 
     }
 });
+
+   
